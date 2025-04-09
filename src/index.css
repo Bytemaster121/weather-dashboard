@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .weather-card {
+    @apply rounded-lg shadow-lg p-6;
+  }
+
+  .animate-fade-in {
+    @apply transition-opacity duration-200 ease-in-out;
+  }
+
+  .animate-slide-up {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+}
